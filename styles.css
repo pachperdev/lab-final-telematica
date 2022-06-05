@@ -1,0 +1,97 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: teal;
+    color: #fff;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+
+/* Programacion Partidos seccion */
+
+.container {
+    margin: 5px;
+    border: 1px solid black;
+    background-color: #66bdbd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.s1 {
+    margin: 30px 100px 30px 100px;
+
+}
+
+/* Tabla de posiciones */
+
+table {
+    width: 720px;
+    margin: 0 auto;
+    color: white;
+    border: 1px solid white;
+}
+
+tr {
+    cursor: pointer;
+}
+
+.destacado {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+table tr:nth-child(odd):hover {
+    color: black;
+}
+
+table tr:nth-child(even):hover {
+    color: black;
+}
