@@ -1,0 +1,24 @@
+{
+  "name": "lab-final-telematica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "logica.js",
+  "scripts": {
+    "dev": "nodemon ./logica.js",
+    "start": "node ./logica.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pachperdev/lab-final-telematica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pachperdev/lab-final-telematica/issues"
+  },
+  "homepage": "https://github.com/pachperdev/lab-final-telematica#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
