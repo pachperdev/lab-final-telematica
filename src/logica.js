@@ -31,8 +31,6 @@ app.get('/data', (req, res) => {
 
         });
         
-    
-        console.log(mess)
 
     });
 
@@ -44,15 +42,32 @@ app.get('/data', (req, res) => {
 
 app.get('/registro',(req,res)=>{
 
-    let {email,psw} = req.query
+     let {email,psw} = req.query
+     console.log(email)
+     console.log(psw)
+     
+   
+    
 
-    con.query(`select Email,Contraseña from Usuarios Where Email = ${email} AND Contraseña = ${psw}`, (err, mess, fields) => {
+    con.query(`select email from usuarios Where email = '${email}' `, (err, mess, fields) => {
          
         console.log(mess)
-        if(mess=NULL){
+        if(mess=[]){
 
-            con.query(`INSERT INTO Usuarios(Email,Contraseña) Values('${email}','${psw}')`)
+            con.query(`INSERT INTO usuarios(email,contrasena) Values('${email}','${psw}')`, (err,result)=>{
+               if (err)throw err;
+               console.log("Usuario Registrado")
 
+
+            });
+
+        }else{
+            
+            res.status(200).json({
+
+                 data:mess,
+
+            });
 
 
         }
@@ -62,8 +77,10 @@ app.get('/registro',(req,res)=>{
     
     });
 
-
+ 
 })
+
+//login//
 
 
 

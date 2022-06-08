@@ -14,39 +14,33 @@ document.getElementById("psw").addEventListener("change",function(){
     console.log(psw)
 
 })
-document.getElementById("psw-repeat").addEventListener("change",function(){
-   rpsw = this.value; 
-    console.log(rpsw)
 
-})
 
 
 btn.addEventListener("click",function(){
 
+    
 
     reg = [email,psw];
+    console.log(reg)
 
-
-  /*   fetch('/registro',{
-      
-        headers: {
-            'Content-Type':'application/json'
-
-        },
-        method:'POST',
-        body: JSON.stringify(reg)
-        
-
-
-    }) */
 
   registro();
 
 });
 
 async function registro(){
+   let response = await fetch(`/registro?email=${email}&psw=${psw}`)
+   let json = await response.json();
 
 
+   if(json.data =! email ){
+         
+    alert("Usuario Ingresado");
 
+         
+   }else if(json.data == email){
+      alert("El Usuario que trata de ingresar ya se encuentra registrado")
+   }
 
 }
