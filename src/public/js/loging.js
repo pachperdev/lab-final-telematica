@@ -8,5 +8,8 @@ function ir(){
     if (user == u & pass == c) {
         window.location="minuto-minuto.html"
     }
+    else(
+        alert("Usuario o contraseña erroneo")
+    )
 
 }
