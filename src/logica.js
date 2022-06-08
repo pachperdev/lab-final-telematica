@@ -19,17 +19,17 @@ con.connect(function (err) {
 
 })
 
-app.get('/data' ,(req,res)=>{
+app.get('/data', (req, res) => {
 
     con.query('select nombre from equipos order by id', (err, mess, fields) => {
 
         res.status(200).json({
-        data:mess,
-        
+            data: mess,
+
 
         });
         console.log(mess)
-    
+
     });
 
 
@@ -38,10 +38,10 @@ app.get('/data' ,(req,res)=>{
 
 //settings
 app.set('port', process.env.PORT || 3000)
-app.use(express.json()); 
-app.use(express.urlencoded({ extended: false })); 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.listen(app.get('port'), ()=>{
+app.listen(app.get('port'), () => {
     console.log('server on port 3000')
 });
