@@ -3,7 +3,7 @@ const partido2 = document.getElementById("partidovalue2")
 const partido3 = document.getElementById("partidovalue3")
 const partido4 = document.getElementById("partidovalue4")
 function partido() {
-  fetch('data')
+  fetch('/data')
     .then(response => {
       return response.json();
     }).then(json => {
