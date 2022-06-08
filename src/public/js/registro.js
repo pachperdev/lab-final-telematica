@@ -32,6 +32,7 @@ btn.addEventListener("click",function(){
 async function registro(){
    let response = await fetch(`/registro?email=${email}&psw=${psw}`)
    let json = await response.json();
+   
 
 
    if(json.data =! email ){

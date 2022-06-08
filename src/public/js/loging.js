@@ -1,11 +1,23 @@
-function ir(){
+
+
+
+async function ir(){
     var c = 1234;
     var u = "admin";
 
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    
+    let response = await fetch(`/login?user=${user}&pass=${pass}`)
+    let json = await response.json();
 
-    if (user == u & pass == c) {
+    console.log(json.data[0].email)
+    console.log(json.data[0].contrasena)
+
+
+
+   
+    if (user == json.data[0].email & pass == json.data[0].contrasena) {
         window.location="minuto-minuto.html"
     }
     else(

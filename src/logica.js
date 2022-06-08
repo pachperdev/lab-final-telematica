@@ -43,15 +43,13 @@ app.get('/data', (req, res) => {
 app.get('/registro',(req,res)=>{
 
      let {email,psw} = req.query
-     console.log(email)
-     console.log(psw)
      
    
     
 
     con.query(`select email from usuarios Where email = '${email}' `, (err, mess, fields) => {
          
-        console.log(mess)
+        
         if(mess=[]){
 
             con.query(`INSERT INTO usuarios(email,contrasena) Values('${email}','${psw}')`, (err,result)=>{
@@ -81,7 +79,30 @@ app.get('/registro',(req,res)=>{
 })
 
 //login//
+app.get("/login",(req,res)=>{
 
+    let {user,pass} = req.query
+    con.query(`select email,contrasena from usuarios Where email = '${user}' and contrasena = '${pass}' `, (err, mess, fields) => {
+  
+   
+        res.status(200).json({
+
+            data:mess,
+
+       });
+
+
+       
+
+
+        
+    })
+    
+   
+
+
+
+});
 
 
 
