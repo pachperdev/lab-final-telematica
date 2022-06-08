@@ -23,12 +23,13 @@
             </div>
         </ul>
     </nav>
+    <script type="text/javascript" src="js/loging.js"></script>
     <div class="login-page">
         <div class="form">
             <form class="login-form">
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password" />
-                <button>login</button>
+                <input type="text" placeholder="username" id="username"/>
+                <input type="password" placeholder="password" id="password"/>
+                <input onclick=ir() type="button" value="Login" class="button">
                 <p class="message">Not registered? <a href="registro.html">Create an account</a></p>
             </form>
         </div>
