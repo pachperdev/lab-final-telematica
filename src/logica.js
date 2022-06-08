@@ -4,6 +4,8 @@ const mysql = require("mysql");
 const path = require("path");
 
 
+
+
 var con = mysql.createConnection({
 
     host: "telematica3229.ci94bml2ssya.us-east-2.rds.amazonaws.com",
@@ -28,12 +30,40 @@ app.get('/data' ,(req,res)=>{
         
 
         });
-        console.log(mess)
+        
     
     });
 
 
 });
+
+
+//registro//
+
+app.get('/registro',(req,res)=>{
+
+    let {email,psw} = req.query
+
+    con.query(`select Email,Contraseña from Usuarios Where Email = ${email} AND Contraseña = ${psw}`, (err, mess, fields) => {
+         
+        console.log(mess)
+        if(mess=NULL){
+
+            con.query(`INSERT INTO Usuarios(Email,Contraseña) Values('${email}','${psw}')`)
+
+
+
+        }
+
+
+        
+    
+    });
+
+
+})
+
+
 
 
 //settings
