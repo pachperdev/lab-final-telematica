@@ -18,7 +18,6 @@ var con = mysql.createConnection({
 con.connect(function (err) {
     if (err) throw err;
     console.log("Conectado")
-
 })
 
 app.get('/data', (req, res) => {
@@ -27,83 +26,69 @@ app.get('/data', (req, res) => {
 
         res.status(200).json({
             data: mess,
-
-
         });
-        
-
     });
-
-
 });
 
 
 //registro//
 
-app.get('/registro',(req,res)=>{
+app.get('/registro', (req, res) => {
 
-     let {email,psw} = req.query
-     
-   
-    
+    let { email, psw } = req.query
 
     con.query(`select email from usuarios Where email = '${email}' `, (err, mess, fields) => {
-         
-        
-        if(mess=[]){
 
-            con.query(`INSERT INTO usuarios(email,contrasena) Values('${email}','${psw}')`, (err,result)=>{
-               if (err)throw err;
-               console.log("Usuario Registrado")
+        if (mess = []) {
 
-
+            con.query(`INSERT INTO usuarios(email,contrasena) Values('${email}','${psw}')`, (err, result) => {
+                if (err) throw err;
+                console.log("Usuario Registrado")
             });
 
-        }else{
-            
+        } else {
+
             res.status(200).json({
-
-                 data:mess,
-
+                data: mess,
             });
-
-
         }
-
-
-        
-    
     });
-
- 
 })
 
 //login//
-app.get("/login",(req,res)=>{
+app.get("/login", (req, res) => {
 
-    let {user,pass} = req.query
+    let { user, pass } = req.query
     con.query(`select email,contrasena from usuarios Where email = '${user}' and contrasena = '${pass}' `, (err, mess, fields) => {
-  
-   
+
         res.status(200).json({
-
-            data:mess,
-
-       });
-
-
-       
-
-
-        
+            data: mess,
+        });
     })
-    
-   
-
-
-
 });
 
+//Arbitros
+app.get('/registro', (req, res) => {
+
+    let { email, psw } = req.query
+
+    con.query(`select email from usuarios Where email = '${email}' `, (err, mess, fields) => {
+
+        if (mess = []) {
+
+            con.query(`INSERT INTO usuarios(email,contrasena) Values('${email}','${psw}')`, (err, result) => {
+                if (err) throw err;
+                console.log("Usuario Registrado")
+            });
+
+        } else {
+
+            res.status(200).json({
+                data: mess,
+            });
+        }
+    });
+})
 
 
 //settings

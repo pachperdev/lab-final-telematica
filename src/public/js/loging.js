@@ -18,7 +18,7 @@ async function ir(){
 
    
     if (user == json.data[0].email & pass == json.data[0].contrasena) {
-        window.location="minuto-minuto.html"
+        window.location="arbitros.html"
     }
     else(
         alert("Usuario o contraseña erroneo")
