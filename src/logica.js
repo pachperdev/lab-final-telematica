@@ -68,7 +68,7 @@ app.get("/login", (req, res) => {
 });
 
 //Arbitros
-app.get('/registro', (req, res) => {
+app.get('/arbitros', (req, res) => {
 
     let { email, psw } = req.query
 
