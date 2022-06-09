@@ -70,24 +70,18 @@ app.get("/login", (req, res) => {
 //Arbitros
 app.get('/arbitros', (req, res) => {
 
-    let { email, psw } = req.query
+    let { na1, aa1, pa1,na2, aa2, pa2,na3, aa3, pa3,na4, aa4, pa4 } = req.query
 
-    con.query(`select email from usuarios Where email = '${email}' `, (err, mess, fields) => {
+    console.log(na1, aa1, pa1)
 
-        if (mess = []) {
-
-            con.query(`INSERT INTO usuarios(email,contrasena) Values('${email}','${psw}')`, (err, result) => {
-                if (err) throw err;
-                console.log("Usuario Registrado")
-            });
-
-        } else {
-
-            res.status(200).json({
-                data: mess,
-            });
-        }
+    con.query(`INSERT INTO arbitros(nombre,apellido,procedencia) Values('${na1}','${aa1}','${pa1}'),
+    ('${na2}','${aa2}','${pa2}'),
+    ('${na3}','${aa3}','${pa3}'),
+    ('${na4}','${aa4}','${pa4}')`, (err, result) => {
+        if (err) throw err;
+        console.log("Usuario Registrado")
     });
+
 })
 
 

@@ -63,3 +63,13 @@ document.getElementById("pa4").addEventListener("change", function () {
     pa4 = this.value;
     console.log(pa4);
 })
+
+btn.addEventListener("click", function () {
+    registro();
+});
+
+async function registro() {
+    let response = await fetch(`/arbitros?na1=${na1}&aa1=${aa1}&pa1=${pa1}&na2=${na2}&aa2=${aa2}&pa2=${pa2}&na3=${na3}&aa3=${aa3}&pa3=${pa3}&na4=${na4}&aa4=${aa4}&pa4=${pa4}`)
+    let json = await response.json();
+
+}
