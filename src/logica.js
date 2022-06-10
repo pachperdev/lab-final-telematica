@@ -81,6 +81,19 @@ app.get('/arbitros', (req, res) => {
     });
 
 })
+//programacion
+app.get('/program', (req, res) => {
+
+    let { ea1, eb2, es1 } = req.query
+
+    console.log(ea1, eb2, es1)
+    
+    con.query(`INSERT INTO partidos(equipoa,equipob,estadio) Values('${ea1}','${eb2}','${es1}')`, (err, result) => {
+        if (err) throw err;
+        console.log("Usuario Registrado")
+    });
+
+})
 
 //Estadios
 app.get('/estadios', (req, res) => {

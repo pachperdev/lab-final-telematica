@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">⚽TeleChampions⚽</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="loging.html">Ingresar</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="minuto-minuto.html">Minuto a Minuto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </div>
+        </ul>
+    </nav>
+    <section class="s1 aling-items-center">
+        <div>
+            <h4>Crear Partido</h4>
+            <br>
+            <div>
+                <h4>Equipo A</h4>
+                <br>
+                <select class="form-select" id="TeamA">
+
+                    <option selected disabled value> Seleccionar equipo</option>
+                    <option value="Millonarios" id="ea2">Millonarios</option>
+                    <option value="Junior" id="eb1">Junior</option>
+                    <option value="America de cali" id="ea1">America de cali</option>
+                    <option value="Tolima" id="ea1">Tolima</option>
+                    <option value="Nacional" id="ea1">Nacional</option>
+                    <option value="Once caldas" id="ea1">Once caldas</option>
+                    <option value="Magdalena" id="ea1">Magdalena</option>
+                    <option value="Jaguares" id="ea1">Jaguares</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <h4 >Equipo B</h4>
+                <br>
+                <select class="form-select" id="TeamB">
+
+                    <option selected disabled value> Seleccionar equipo</option>
+                    <option value="Millonarios" id="eb2">Millonarios</option>
+                    <option value="Junior" id="eb1">Junior</option>
+                    <option value="America de cali" id="eb2">America de cali</option>
+                    <option value="Tolima" id="eb2">Tolima</option>
+                    <option value="Nacional" id="eb2">Nacional</option>
+                    <option value="Once caldas" id="eb2">Once caldas</option>
+                    <option value="Magdalena" id="eb2">Magdalena</option>
+                    <option value="Jaguares" id="eb2">Jaguares</option>
+                </select>
+            </div>
+        </div>
+
+    </section>
+    <section class="s1 aling-items-center">
+        <div>
+            <h4>Fecha y lugar</h4>
+            <br>
+            <div>
+                <h4>Seleccione Estadio</h4>
+                <br>
+                <select class="form-select" id="Estadio">
+
+                    <option selected disabled value> Seleccionar equipo</option>
+                    <option value="Metropolitano" id="es1">Metropolitano</option>
+                    <option value="Atanacio girardot" id="es1">Atanacio girardot</option>
+                    <option value="Estadio Deportivo cali" id="es1">Estadio Deportivo cali</option>
+                    <option value="General Santander" id="es1">Genetal Santander</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <h4>Fecha</h4>
+                <br>
+                <input type="datetime-local" id="meeting-time"
+                    name="meeting-time" value="2022-06-10T08:30"
+                    min="2022-06-07T00:00" max="2023-06-14T00:00">
+            </div>
+
+        </div>
+
+    </section>
+    <button class="registerbtn" id="btn">Enviar</button>
+    
+    <script src="js/programacion.js" type="text/javascript"></script>
+</body>
+
+</html>
