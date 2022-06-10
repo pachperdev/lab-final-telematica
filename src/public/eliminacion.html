@@ -7,35 +7,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/cssLoging.css">
+    <link rel="stylesheet" href="/css/registro.css">
     <title>CRUD</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <nav class="navbar navbar-dark">
-            </nav>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-                    </li>
-                </ul>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">⚽TeleChampions⚽</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="arbitros.html">Arbitros</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="#">Equipos de Futbol</a></li>
+                <li><a href="eliminacion.html">Modificación/Eliminación de datos</a></li>
             </div>
-        </div>
+        </ul>
     </nav>
+    <br>
+    <h3>Arbitros</h3>
     <div eblclass="container">
-        <a href="/create" class="btn btn-outline-primary mt-4"><i class='bx bxs-plus-circle bx-md'></i></a>
         <table class="table table-bordered table-striped text-center mt-4">
             <thead>
                 <tr class="bg-primary text-white">
-                    <th scope="col">ID</th>
                     <th scope="col">NOMBRE</th>
+                    <th scope="col">APELLIDO</th>
                     <th scope="col">PROCEDENCIA</th>
                     <th scope="col">ACCIONES</th>
                 </tr>
@@ -44,13 +44,13 @@
                 
                 <tr>
                     <td>
-                        <%= user.id %>
+                        <p><span id="na1"></span></p>
                     </td>
                     <td>
-                        <%= user.user %>
+                        <p><span id="aa1"></span></p>
                     </td>
                     <td>
-                        <%= user.rol %>
+                        <p><span id="pa1"></span></p>
                     </td>
                     <td>
                         <a href="editar.html" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a>
@@ -58,10 +58,58 @@
                                 class='bx bxs-trash-alt'></i></a>
                     </td>
                 </tr>
-                    
+                <tr>
+                    <td>
+                        <p><span id="na2"></span></p>
+                    </td>
+                    <td>
+                        <p><span id="aa2"></span></p>
+                    </td>
+                    <td>
+                        <p><span id="pa2"></span></p>
+                    </td>
+                    <td>
+                        <a href="editar.html" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a>
+                        <a href="/delete/<%= user.id %>" class="btn btn-outline-danger"><i
+                                class='bx bxs-trash-alt'></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span id="na3"></span></p>
+                    </td>
+                    <td>
+                        <p><span id="aa3"></span></p>
+                    </td>
+                    <td>
+                        <p><span id="pa3"></span></p>
+                    </td>
+                    <td>
+                        <a href="editar.html" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a>
+                        <a href="/delete/<%= user.id %>" class="btn btn-outline-danger"><i
+                                class='bx bxs-trash-alt'></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span id="na4"></span></p>
+                    </td>
+                    <td>
+                        <p><span id="aa4"></span></p>
+                    </td>
+                    <td>
+                        <p><span id="pa4"></span></p>
+                    </td>
+                    <td>
+                        <a href="editar.html" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a>
+                        <a href="/delete/<%= user.id %>" class="btn btn-outline-danger"><i
+                                class='bx bxs-trash-alt'></i></a>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
+    <script src="js/eliminacion.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>

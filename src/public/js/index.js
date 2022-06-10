@@ -2,6 +2,7 @@ const partido1 = document.getElementById("partidovalue")
 const partido2 = document.getElementById("partidovalue2")
 const partido3 = document.getElementById("partidovalue3")
 const partido4 = document.getElementById("partidovalue4")
+
 function partido() {
   fetch('/data')
     .then(response => {
@@ -9,6 +10,7 @@ function partido() {
     }).then(json => {
 
       const part = json.data;
+      console.log(part);
       const equip1 = part[0].nombre;
       const equip2 = part[1].nombre;
       const equip3 = part[2].nombre;

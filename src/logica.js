@@ -20,6 +20,7 @@ con.connect(function (err) {
     console.log("Conectado")
 })
 
+//para el home, data = equipos
 app.get('/data', (req, res) => {
 
     con.query('select nombre from equipos order by id', (err, mess, fields) => {
@@ -94,6 +95,17 @@ app.get('/estadios', (req, res) => {
     });
 
 })
+
+//Arbitros para editar - eliminacion.html
+app.get('/arbitrosmostrar', (req, res) => {
+
+    con.query('select nombre, apellido, procedencia from arbitros', (err, mess, fields) => {
+
+        res.status(200).json({
+            data: mess,
+        });
+    });
+});
 
 
 //settings
