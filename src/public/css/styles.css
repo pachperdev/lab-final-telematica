@@ -65,6 +65,79 @@ li {
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
+=======
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    opacity: 0.9;
+    margin-left: 500px;
+}
+
+.select {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-image: url("icono2.png");
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.centrar {
+    cursor: pointer;
+    max-width: 300px;
+    text-align: center;
+    color: white;
+    padding: 0.2rem;
+    margin: 2rem auto;
+}
+.centrarb {
+    cursor: pointer;
+    max-width: 300px;
+    text-align: center;
+    color: white;
+    padding: 0.2rem;
+    margin: 2rem auto;
+}
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+>>>>>>> 79e65bdf0a21ea5f85f668174e918019d16ecd1a
 
 .s1 {
     margin: 30px 100px 30px 100px;
