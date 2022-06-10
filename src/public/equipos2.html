@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/cssLoging.css">
+    <link rel="stylesheet" href="/css/registro.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">⚽TeleChampions⚽</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="arbitros.html">Arbitros</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="eliminacion.html">Modificacion/Eliminacion de datos</a></li>
+            </div>
+        </ul>
+    </nav>
+    <form>
+        <div class="container-fluid">
+
+            <h1 class="centrar"> Registro de Equipos</h1>
+            <p>Elija el Equipo y LLene su Plantilla</p>
+            
+            <hr>
+                <label for="email"><b>Seleccionar Equipo</b></label>
+                <br><br>
+               <select class= "form-select" style="text-align:center;"id="team" > 
+                   
+                <option selected disabled value> Seleccionar equipo</option>
+                <option value="1" id="equi">Millonarios</option>
+                <option value="2" id="equi">Junior</option>
+                <option value="3" id="equi">America de cali</option>
+                <option value="4" id="equi">Tolima</option>
+                <option value="5" id="equi">Nacional</option>
+                <option value="6" id="equi">Once caldas</option>
+                <option value="7" id="equi">Magdalena</option>
+                <option value="8" id="equi">Jaguares</option>
+               </select>
+               <br>
+                 
+             <hr> 
+             <div class="lala">
+               
+                  
+                    <div class="form-group two-fields">
+                     <p> <label for="">Datos del Jugador</label></p>
+                     <br>
+                      <div class="input-group">
+                        <input name="nombre" id="nombre" type="text" required class="form-control" placeholder="nombre">
+                        <input name="apellido" id="apellido" type="text" required class="form-control" placeholder="apellido">
+                        <input name="numeros" id="numeros" type="text" required class="form-control" placeholder="numeros">
+                    </div>
+                    </div>
+                  
+                
+              </div>
+              <hr>
+
+            <button class="registerbtn" id="btn">Enviar</button>
+        </div>
+    </form>
+
+
+    <script src="/js/equipos2.js" type="module"></script>
+</body>
+
+</html>

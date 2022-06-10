@@ -30,6 +30,20 @@ app.get('/data', (req, res) => {
     });
 });
 
+//equipos2//
+
+app.get('/equipos2', (req, res) => {
+
+    let { team, nombre, apellido, numeros } = req.query
+
+    console.log(team, nombre, apellido, numeros)
+
+    con.query(`INSERT INTO jugadores(idequipos,nombre,apellido,numeros) Values('${team}','${nombre}','${apellido}','${numeros}')`, (err, result) => {
+        if (err) throw err;
+        console.log("jugador registrado")
+    });
+
+})
 
 //registro//
 
