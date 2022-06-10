@@ -15,8 +15,6 @@ async function ir(){
     console.log(json.data[0].contrasena)
 
 
-
-   
     if (user == json.data[0].email & pass == json.data[0].contrasena) {
         window.location="arbitros.html"
     }
