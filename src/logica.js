@@ -70,20 +70,30 @@ app.get("/login", (req, res) => {
 //Arbitros
 app.get('/arbitros', (req, res) => {
 
-    let { na1, aa1, pa1,na2, aa2, pa2,na3, aa3, pa3,na4, aa4, pa4 } = req.query
+    let { na1, aa1, pa1 } = req.query
 
     console.log(na1, aa1, pa1)
 
-    con.query(`INSERT INTO arbitros(nombre,apellido,procedencia) Values('${na1}','${aa1}','${pa1}'),
-    ('${na2}','${aa2}','${pa2}'),
-    ('${na3}','${aa3}','${pa3}'),
-    ('${na4}','${aa4}','${pa4}')`, (err, result) => {
+    con.query(`INSERT INTO arbitros(nombre,apellido,procedencia) Values('${na1}','${aa1}','${pa1}')`, (err, result) => {
         if (err) throw err;
         console.log("Usuario Registrado")
     });
 
 })
 
+//Estadios
+app.get('/estadios', (req, res) => {
+
+    let { ne, ce, ue } = req.query
+
+    console.log(ne, ce, ue)
+
+    con.query(`INSERT INTO estadios(e_nombres,capacidad,ubicacion) Values('${ne}','${ce}','${ue}')`, (err, result) => {
+        if (err) throw err;
+        console.log("Usuario Registrado")
+    });
+
+})
 
 
 //settings
